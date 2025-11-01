@@ -313,3 +313,39 @@ This project is part of the ALX Backend Specialization program.
 
 **Adeola Adeagbo**  
 GitHub: [@AdeolaAdeagbo](https://github.com/AdeolaAdeagbo)
+
+# ALX Travel App (Celery + RabbitMQ + Email Notifications)
+
+## Setup Steps
+
+1. **Install dependencies**
+   ```bash
+   pip install celery django
+Install RabbitMQ
+
+Ubuntu: sudo apt install rabbitmq-server
+
+Windows: Download from https://www.rabbitmq.com
+
+Run RabbitMQ
+
+rabbitmq-server
+
+
+Start Celery worker
+
+celery -A alx_travel_app worker -l info
+
+
+Run Django server
+
+python manage.py runserver
+
+
+Trigger booking
+
+Create a booking via API or admin.
+
+Check email logs to confirm async email delivery.
+
+✅ Background email tasks are now handled asynchronously using Celery + RabbitMQ.
